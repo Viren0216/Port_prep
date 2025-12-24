@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #0f172a;
+    color:#f8fafc;
+    line-height:1.6;
+}
+
+header{
+    position:sticky;
+    top:0;
+    background: #020617;
+    box-shadow: 0 2px 10px rgba(56,189,240,0.2);
+    z-index:1000;
+}
+
+.navbar{
+    max-width:1100px;
+    margin: auto;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+ul{
+    list-style-type: none;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.nav-links a{
+    color:#f8fafc;
+    margin-left: 20px;
+    text-decoration: none;
+    position:relative;
+}
+
+.nav-links a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #38bdf8;
+    position: absolute;
+    bottom:-5px;
+    left: 0;
+    transition:0.3s;
+}
+
+.nav-links a:hover::after{
+    width: 100%;
+}
+
+.hero{
+    max-width: 1100px;
+    margin: 100px auto;
+    text-align: center;
+    animation:fadeUp 0.5s ease-out forwards;
+}
+
+.hero h1{
+    font-size: 3rem;
+    color: #38bdf8;
+}
+
+.hero-btn a{
+    display: inline-block;
+    margin: 15px;
+    padding: 12px 30px;
+    border-radius:30px;
+    background: #38bdf8;
+    color: #020617;
+    text-decoration: none;
+    transition:0.3s;
+}
+
+.hero-btn a:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #38bdf8;
+}
+
+@keyframes fadeUp{
+    from{opacity: 0; transform:translateY(40px);}
+    to{opacity: 1; transform: translateY(0);}
+}
+
+.project-card, .skills-grid span{
+    background: #020617;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.project-card:hover, .skills-grid span:hover{
+    transform: translateY(-8px) scale(1.05);
+    box-shadow:0 0 25px rgba(56,189,248,0.4);
+}
